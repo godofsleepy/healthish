@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "580565759860",
-    "firebase_url": "https://health-shelter.firebaseio.com",
-    "project_id": "health-shelter",
-    "storage_bucket": "health-shelter.appspot.com"
+    "project_number": "135282733319",
+    "project_id": "healthish-eaf58",
+    "storage_bucket": "healthish-eaf58.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:580565759860:android:dc61f76341f3116c7a9e21",
+        "mobilesdk_app_id": "1:135282733319:android:9665674fee8130959395a2",
         "android_client_info": {
           "package_name": "tech.hansaplast.healthish"
         }
       },
       "oauth_client": [
         {
-          "client_id": "580565759860-6uqddiohgtn1i9kgpbaehfuimhscsq4u.apps.googleusercontent.com",
+          "client_id": "135282733319-4p1g89c6q1nrtl394dq8ia0hqdmoh675.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.hansaplast.healthish",
+            "certificate_hash": "fcaccd755218f18cb5ac87a4602d1fbf030c0ca7"
+          }
+        },
+        {
+          "client_id": "135282733319-edg3d8hjc9viqnob3uoj78pdq5bl0kkr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAzifFEq7j0TxAOM_9KKjyIyZBhcyziEOE"
+          "current_key": "AIzaSyAYw4xM-E1LZjKv_hpXi4cHEKAG929i9bY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "580565759860-6uqddiohgtn1i9kgpbaehfuimhscsq4u.apps.googleusercontent.com",
+              "client_id": "135282733319-edg3d8hjc9viqnob3uoj78pdq5bl0kkr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
