@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:healthish/utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,36 +21,23 @@ class SplashScreenState extends State<SplashScreen>
 
   @override
   void initState() {
-    imageAnimationController = AnimationController(
-      vsync: this,
-      duration: Duration(
-        seconds: 1,
-      ),
-      value: 0.1,
-    );
-    textAnimationController = AnimationController(
-      vsync: this,
-      duration: Duration(
-        seconds: 3,
-      ),
-    );
-    imageAnimation = CurvedAnimation(
-      curve: Curves.easeInCirc,
-      parent: imageAnimationController,
-    );
-    textAnimation = CurvedAnimation(
-      curve: Curves.fastOutSlowIn,
-      parent: textAnimationController,
-    );
-    super.initState();
-    imageAnimationController.forward();
-    textAnimationController.forward();
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+    ));
+    setUpAnimation();
     movingToNextScreen();
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        brightness: Brightness.light,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       backgroundColor: Constants.whiteColor,
       body: Center(
         child: Column(
@@ -88,6 +76,32 @@ class SplashScreenState extends State<SplashScreen>
         ),
       ),
     );
+  }
+
+  void setUpAnimation() {
+    imageAnimationController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 1,
+      ),
+      value: 0.1,
+    );
+    textAnimationController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 3,
+      ),
+    );
+    imageAnimation = CurvedAnimation(
+      curve: Curves.easeInCirc,
+      parent: imageAnimationController,
+    );
+    textAnimation = CurvedAnimation(
+      curve: Curves.fastOutSlowIn,
+      parent: textAnimationController,
+    );
+    imageAnimationController.forward();
+    textAnimationController.forward();
   }
 
   @override
