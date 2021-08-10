@@ -2,8 +2,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:healthish/helper/constants.dart';
 
-
-
 // class DetailContent extends StatefulWidget {
 //   final String type;
 //   final DocumentSnapshot dataContent;

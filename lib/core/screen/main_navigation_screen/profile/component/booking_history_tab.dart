@@ -2,7 +2,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:healthish/helper/constants.dart';
 
-
 // class BookingHistoryTab extends StatelessWidget {
 //   final DocumentSnapshot dataBook;
 
@@ -120,7 +119,7 @@
 //   String subtractDate(String bookDate) {
 //     var parsedDate = DateTime.parse("$bookDate:00");
 //     var todayDate = DateTime.now();
-    
+
 //     var differenceDays = parsedDate.difference(todayDate);
 //     if (differenceDays.inDays < 0) {
 //       return "${todayDate.difference(parsedDate).inDays.toString()} Hari yang lalu";

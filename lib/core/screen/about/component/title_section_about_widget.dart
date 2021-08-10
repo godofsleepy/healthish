@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class TitleSection extends StatelessWidget{
-
+class TitleSection extends StatelessWidget {
   final String image;
   final String title;
 
@@ -38,5 +37,4 @@ class TitleSection extends StatelessWidget{
       ],
     );
   }
-
 }

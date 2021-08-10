@@ -28,14 +28,14 @@ class SplashScreenState extends State<SplashScreen>
     ));
     setUpAnimation();
     movingToNextScreen();
-    // var snapshot = FirebaseFirestore.instance
-    //     .collection('app-config')
-    //     .doc("dev")
-    //     .get()
-    //     .then((value) {
-    //   Map<String, dynamic> data = value.data() as Map<String, dynamic>;
-    //   print(json.encode(data));
-    // });
+    var snapshot = FirebaseFirestore.instance
+        .collection('app-config')
+        .doc("dev")
+        .get()
+        .then((value) {
+      Map<String, dynamic> data = value.data() as Map<String, dynamic>;
+      print(json.encode(data));
+    });
 
     super.initState();
   }

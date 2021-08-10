@@ -35,7 +35,6 @@
 //   bool obscureText = true;
 //   ChangePasswordPresenter changePasswordPresenter;
 
-
 //   DetailAccountState() {
 //     changePasswordPresenter = ChangePasswordPresenter(this);
 //   }
@@ -240,7 +239,7 @@
 //               child: SingleChildScrollView(
 //                 reverse: true,
 //                 child: Column(
-                
+
 //                 children: [
 //                   Text(
 //                     "Ganti Password",

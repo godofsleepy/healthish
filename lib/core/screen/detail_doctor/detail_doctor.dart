@@ -6,7 +6,6 @@
 
 // import 'component/booking_sheet.dart';
 
-
 // class DetailDoctor extends StatefulWidget {
 //   final String id;
 //   final String name;

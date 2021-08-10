@@ -1,26 +1,40 @@
-import 'dart:convert';
-
 import 'package:healthish/domain/model/appconfig_model.dart';
 
 extension AppconfigResponse on AppconfigModel {
-  Map<String, dynamic> toMap() {
-    return {
-      'contact-complaiment': contactComplaiment?.toJson(),
-      'title': title,
-      'guide': guide?.map((x) => x?.toJson()).toList(),
-    };
-  }
-
   static AppconfigModel fromMap(Map<String, dynamic> map) {
     return AppconfigModel(
       contactComplaiment:
-          ContactComplaiment.fromJson(map['contact-complaiment']),
+          ContactComplaimentResponse.fromJson(map['contact-complaiment']),
       title: map['title'],
-      guide: List<Guide?>.from(map['guide']?.map((x) => Guide?.fromJson(x))),
+      guide: List<GuideModel?>.from(
+          map['guide']?.map((x) => GuideResponse?.fromJson(x))),
     );
   }
+}
 
-  String toJson() => json.encode(toJson());
+extension GuideResponse on GuideModel {
+  static GuideModel fromJson(Map<String, dynamic> json) => GuideModel(
+        image: json['image'] as String?,
+        titile: json['titile'] as String?,
+        description: json['description'] as String?,
+      );
+}
 
-  AppconfigModel fromJson(String source) => fromMap(json.decode(source));
+extension ContactComplaimentResponse on ContactComplaimentModel {
+  static ContactComplaimentModel fromJson(Map<String, dynamic> json) =>
+      ContactComplaimentModel(
+        address: json['address'] == null
+            ? null
+            : AddressResponse.fromJson(json['address'] as Map<String, dynamic>),
+        phone: json['phone'] as String?,
+        telephone: json['telephone'] as String?,
+        email: json['email'] as String?,
+      );
+}
+
+extension AddressResponse on AddressModel {
+  static AddressModel fromJson(Map<String, dynamic> json) => AddressModel(
+        street: json['street'] as String?,
+        name: json['name'] as String?,
+      );
 }
