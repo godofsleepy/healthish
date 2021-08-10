@@ -1,0 +1,1 @@
+enum BaseStatus { INTIAL, SUCCESS, ERROR, LOADING }

@@ -32,15 +32,17 @@ dependencies:
   responsive_framework: ^0.1.2
 
   # utils
+  equatable: ^2.0.3
 
   # di
   get_it: ^7.1.4
 
-  # locale
+  # local
   get_storage: ^2.0.2
 
   # firebase
   firebase_core: ^1.4.0
+  cloud_firestore: ^2.4.0
 
   # stata management
   flutter_bloc: ^7.0.1
