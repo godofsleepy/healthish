@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:healthish/utils/constants.dart';
+import 'package:healthish/core/common/utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

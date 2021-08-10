@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:healthish/screen/splash/splash_screen.dart';
+
+import 'core/screen/splash/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
