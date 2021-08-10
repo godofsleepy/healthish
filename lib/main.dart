@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'core/screen/splash/splash_screen.dart';
+import 'package:healthish/core/common/route/route_generate.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerate.generateRoute,
     );
   }
 }

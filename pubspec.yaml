@@ -39,8 +39,6 @@ dependencies:
   # locale
   get_storage: ^2.0.2
 
-  # remote
-
   # firebase
   firebase_core: ^1.4.0
 
