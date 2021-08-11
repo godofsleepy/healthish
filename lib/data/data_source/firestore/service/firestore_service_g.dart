@@ -1,14 +1,14 @@
 part of 'firestore_service.dart';
 
 class _FirestoreServiceG implements FirestoreService {
+  final FirebaseFirestore firestore;
+
+  _FirestoreServiceG(this.firestore);
+
   @override
   Future<AppconfigModel> getAppCofig() async {
-    var snapshot = await FirebaseFirestore.instance
-        .collection('app-config')
-        .doc("dev")
-        .get();
+    var snapshot = await firestore.collection('app-config').doc("dev").get();
     Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
-    print("map :  ${data}");
     return AppconfigResponse.fromMap(data);
   }
 }

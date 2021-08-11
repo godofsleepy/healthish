@@ -5,7 +5,7 @@ import 'package:healthish/domain/model/appconfig_model.dart';
 part 'firestore_service_g.dart';
 
 abstract class FirestoreService {
-  factory FirestoreService() = _FirestoreServiceG;
+  factory FirestoreService(FirebaseFirestore firestore) = _FirestoreServiceG;
 
   Future<AppconfigModel> getAppCofig();
 }

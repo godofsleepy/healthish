@@ -5,7 +5,7 @@ extension AppconfigResponse on AppconfigModel {
     return AppconfigModel(
       contactComplaiment:
           ContactComplaimentResponse.fromJson(map['contact-complaiment']),
-      title: map['title'],
+      title: map["title"],
       guide: List<GuideModel?>.from(
           map['guide']?.map((x) => GuideResponse?.fromJson(x))),
     );
