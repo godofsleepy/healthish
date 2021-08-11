@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthish/core/screen/splash/splash_screen.dart';
+import 'package:healthish/presentation/screen/splash/splash_screen.dart';
 
 class RouteGenerate {
   static Route<dynamic> generateRoute(RouteSettings settings) {

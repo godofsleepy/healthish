@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:healthish/core/common/utils/constants.dart';
+import 'package:healthish/core/utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

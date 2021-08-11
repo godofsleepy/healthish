@@ -5,6 +5,8 @@ import 'package:healthish/data/data_source/firestore/service/firestore_service.d
 GetIt locator = GetIt.instance;
 
 void setuplocator() {
-  locator.registerSingleton(FirebaseFirestore.instance);
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  locator.registerSingleton<FirebaseFirestore>(firestore);
+
   locator.registerSingleton(FirestoreService(locator.get<FirebaseFirestore>()));
 }

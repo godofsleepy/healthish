@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:healthish/core/common/locator/locator.dart';
-import 'package:healthish/core/common/route/route_generate.dart';
+import 'package:healthish/core/route/route_generate.dart';
+import 'package:healthish/injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
