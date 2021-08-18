@@ -5,6 +5,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthish/core/utils/constants.dart';
+import 'package:healthish/injector.dart';
+import 'package:healthish/data/data_source/firestore/service/firestore_service.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -30,12 +32,14 @@ class SplashScreenState extends State<SplashScreen>
     movingToNextScreen();
     // var snapshot = FirebaseFirestore.instance
     //     .collection('app-config')
-    //     .doc("dev")
+    //     .doc("k")
     //     .get()
     //     .then((value) {
     //   Map<String, dynamic> data = value.data() as Map<String, dynamic>;
     //   print(json.encode(data));
     // });
+
+    locator.get<FirestoreService>().getAppCofig();
 
     super.initState();
   }

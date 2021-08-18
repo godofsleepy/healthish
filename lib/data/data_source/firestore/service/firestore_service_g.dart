@@ -7,8 +7,9 @@ class _FirestoreServiceG implements FirestoreService {
 
   @override
   Future<AppconfigModel> getAppCofig() async {
-    var snapshot = await firestore.collection('app-config').doc("dev").get();
-    Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+    DocumentSnapshot<Map<String, dynamic>> snapshot =
+        await firestore.collection('app-config').doc("dev").get();
+    Map<String, dynamic> data = snapshot.data()!;
     return AppconfigResponse.fromMap(data);
   }
 }

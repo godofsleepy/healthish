@@ -8,5 +8,5 @@ void setuplocator() {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   locator.registerSingleton<FirebaseFirestore>(firestore);
 
-  locator.registerSingleton(FirestoreService(locator.get<FirebaseFirestore>()));
+  locator.registerSingleton(FirestoreService(locator<FirebaseFirestore>()));
 }
